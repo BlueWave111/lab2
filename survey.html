@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IU Survey Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header img {
+      max-width: 150px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0 4px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    input[type="submit"] {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/IUlogo.jpg" alt="IU Logo" />
+    <h1>Survey</h1>
+    <p>If you have a moment, we'd appreciate it if you fill out this survey.</p>
+  </header>
+
+  <form action="/submit_survey" method="post">
+    <section>
+      <h2>Your Information</h2>
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required />
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+    </section>
+
+    <section>
+      <h3>How did you hear about us?</h3>
+      <label><input type="radio" name="referral" value="search" /> Search Engine</label>
+      <label><input type="radio" name="referral" value="word" /> Word of Mouth</label>
+      <label><input type="radio" name="referral" value="social" /> Social Media</label>
+      <label><input type="radio" name="referral" value="other" /> Other</label>
+    </section>
+
+    <section>
+      <h4>Would you like to receive announcements about new CDs and special offers?</h4>
+      <label><input type="checkbox" name="cds" value="yes-like" /> YES, I'd like that.</label>
+      <label><input type="checkbox" name="email-announcements" value="yes-email" /> Please send me email announcements.</label>
+
+      <label for="contact-method">Please contact me by:</label>
+      <select name="contact-method" id="contact-method">
+        <option value="email-postal">Email and postal mail</option>
+        <option value="email-only">Email only</option>
+        <option value="postal-only">Postal mail only</option>
+      </select>
+
+      <input type="submit" value="Submit" />
+    </section>
+  </form>
+</body>
+</html>

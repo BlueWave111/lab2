@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height:800 px; 
+            border: 8px solid green;
+            display: flex;
+            flex-direction: column;
+            background-color: yellow;
+
+        }
+        #Header{
+            /* display: flex;    */
+            height: 80px;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        #Main{
+            /* display: flex; */
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #Sidebar A{
+            /* display: flex; */
+            height: 300px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #Main Content{
+            /* display: flex; */
+            height: 300px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #Sidebar B{
+            /* display: flex; */
+            height: 300px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #Footer{
+            /* display: flex;0 */
+            height: 80px;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .box{
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            border: 8px solid green;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="Header" class="box">
+        Header
+    </div>
+    <div id="Main" style="display: flex; flex: 1;">
+        <div id="Sidebar A " class="box">
+        Sidebar A 
+        </div>
+        <div id="Main Content" class="box">
+        Main Content
+        </div>
+        <div id="Sidebar B" class="box">
+        Sidebar B
+    </div>
+    <div id="Footer" class="box">
+        Footer
+    </div>
+</body>
+</html>
